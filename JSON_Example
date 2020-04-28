@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<h2>Pick a Letter (t, e, or p) for Some Fun Facts</h2>
-
-<p id="jsonEx"></p>
-
-<script>
-var myProfiles = '{ "myProfs" : ['
-'{
+{
+  "key" : "value",
+"myProfs" : [
+{
   "name" : "Teddy",
   "age" : 21,
   "occupation" : "College Student",
@@ -16,8 +9,8 @@ var myProfiles = '{ "myProfs" : ['
   { "brand" : "Toyota", "models" : [ "Corolla", "Camry"] },
   { "brand" : "Lexus", "models" : [ "UX 200", "GX 460"] }
   ]
-},' +
-'{
+},
+{
   "name" : "Emma",
   "age" : 50,
   "occupation" : "Business Owner",
@@ -25,8 +18,8 @@ var myProfiles = '{ "myProfs" : ['
   { "brand" : "Ford", "models" : [ "Focus", "Ka"] },
   { "brand" : "Honda", "models" : [ "Civic", "Accord"] }
   ]
-},' +
-'{
+},
+{
   "name" : "Peter",
   "age" : 27,
   "occupation" : "Real Estate Agent",
@@ -36,11 +29,6 @@ var myProfiles = '{ "myProfs" : ['
    ]
   }
  ]
-}';
-profile = JSON.parse(myProfiles);
-document.getElementById("jsonEx").innerHTML =
-profile.myProfs[1].name + " " + profile.myProfs[1].age;
-</script>
+}
 
-</body>
-</html>
+input.myprofs[0].cars
