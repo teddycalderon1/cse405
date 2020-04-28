@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Pick a Letter (t, e, or p) for Some Fun Facts</h2>
+
+<p id="jsonEx"></p>
+
+<script>
+var myProfiles = '{ "myProfs" : ['
+'{
+  "name" : "Teddy",
+  "age" : 21,
+  "occupation" : "College Student",
+  "cars" : [
+  { "brand" : "Toyota", "models" : [ "Corolla", "Camry"] },
+  { "brand" : "Lexus", "models" : [ "UX 200", "GX 460"] }
+  ]
+},' +
+'{
+  "name" : "Emma",
+  "age" : 50,
+  "occupation" : "Business Owner",
+  "cars" : [
+  { "brand" : "Ford", "models" : [ "Focus", "Ka"] },
+  { "brand" : "Honda", "models" : [ "Civic", "Accord"] }
+  ]
+},' +
+'{
+  "name" : "Peter",
+  "age" : 27,
+  "occupation" : "Real Estate Agent",
+  "cars" : [
+  { "brand" : "Infiniti", "models" : [ "Q50", "Q70"] },
+  { "brand" : "Mercedes Benz", "models" : [ "AMG S 63", "Maybach S 560"] }
+   ]
+  }
+ ]
+}';
+profile = JSON.parse(myProfiles);
+document.getElementById("jsonEx").innerHTML =
+profile.myProfs[1].name + " " + profile.myProfs[1].age;
+</script>
+
+</body>
+</html>
