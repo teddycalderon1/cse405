@@ -1,34 +1,42 @@
-{
-  "key" : "value",
-"myProfs" : [
-{
-  "name" : "Teddy",
-  "age" : 21,
-  "occupation" : "College Student",
-  "cars" : [
-  { "brand" : "Toyota", "models" : [ "Corolla", "Camry"] },
-  { "brand" : "Lexus", "models" : [ "UX 200", "GX 460"] }
-  ]
-},
-{
-  "name" : "Emma",
-  "age" : 50,
-  "occupation" : "Business Owner",
-  "cars" : [
-  { "brand" : "Ford", "models" : [ "Focus", "Ka"] },
-  { "brand" : "Honda", "models" : [ "Civic", "Accord"] }
-  ]
-},
-{
-  "name" : "Peter",
-  "age" : 27,
-  "occupation" : "Real Estate Agent",
-  "cars" : [
-  { "brand" : "Infiniti", "models" : [ "Q50", "Q70"] },
-  { "brand" : "Mercedes Benz", "models" : [ "AMG S 63", "Maybach S 560"] }
-   ]
-  }
- ]
-}
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JSON Example</h1>
+    <p>Profiles will be displayed using json array</p>
+    <div id="id01"></div>
+    <script>
+      var myProfiles = [
+        {
+      	"name": "Teddy",
+      			"age": 21,
+      			"occupation": "College Student",
+      			"cars": [
+      				"Toyota Corolla", " Lexus GX 460"
+      			]
+      		},
+      		{
+      			"name": "Emma",
+      			"age": 50,
+      			"occupation": "Business Owner",
+      			"cars": [
+      				"Ford Focus",
+      				" Honda Civic"
+      			]
+            }
+      ];
 
-input.myProfs[0].cars
+      profiles(myProfiles);
+
+      function profiles(arr) {
+        var out = "";
+        var i;
+        for(i = 0; i < arr.length; i++) {
+          out += "Name: " + arr[i].name + '</a><br> Age: ' + arr[i].age
+          + '</a><br> Occupation: ' + arr[i].occupation + '</a><br> Cars owned: ' 
+          + arr[i].cars + '</a><br> </a><br>';
+        }
+        document.getElementById("id01").innerHTML = out;
+      }
+    </script>
+  </body>
+</html>
