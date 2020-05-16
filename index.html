@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Node JS chat using socket.io</title>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <form action="">
+      <input id="t" autocomplete="off" /><button>Send</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script> 
+      //saves messages
+    src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+      $(function(){
+        var socket = io();
+        // Form submission handler.
+        $('form').submit(function(){
+          // Send messages
+          socket.emit('chat message', $('#t').val());
+          $('#t').val('');
+          return false;
+        });
+        // Output messages
+        socket.on('chat message', function(msg){
+          $('#messages').append($('<li>').text(msg));
+        });
+      });
+    </script>
+  </body>
+</html>
