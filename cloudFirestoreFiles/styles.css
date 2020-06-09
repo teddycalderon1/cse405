@@ -1,0 +1,102 @@
+body{
+    background: #63be89;
+    font-family: ubuntu;
+}
+
+h1{
+    color: rgb(12, 17, 85);
+    font-size: 64px;
+    letter-spacing: 2px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.content{
+    background: rgb(39, 131, 103);
+    max-width: 960px;
+    margin: 30px auto;
+    padding:  20px 30px;
+    border-radius: 10px 120px 10px 10px;
+    box-shadow: 1px 3px 5px rgba(248, 245, 245, 0.1)
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    padding: 20px;
+    background: rgb(125, 235, 167);
+    font-size: 20px;
+    color: rgb(8, 0, 0);
+    position: relative;
+    border-bottom: 1px solid #ffdbdb;
+    height: 46px;
+}
+
+li:nth-child(even){
+    padding: 20px;
+    background: rgb(125, 235, 167);
+}
+
+li span{
+    display: block;
+}
+
+li span:nth-child(2){
+    font-size: 16px;
+    margin-top: 6px;
+    color: rgba(0, 0, 0, 0.993);
+}
+
+li div{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: rgb(203, 248, 120);
+    width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight:  bold;
+    cursor:  pointer;
+}
+
+form input{
+    float: left;
+    width: 38%;
+    margin: 0;
+    border: 0;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin: 0 1%;
+    padding: 10px;
+    display: block;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+form input:focus{
+    outline: none;
+    border-bottom: 3px solid #88236f;
+    padding-bottom: 8px;
+    transition: all ease 0.2s;
+}
+
+form:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+button{
+    border: 0;
+    background: rgb(18, 6, 71);
+    border-radius: 10px;
+    padding: 13px;
+    width: 14%;
+    box-shadow: -1px 0px 1px rgba(252, 250, 250, 0.1);
+    font-weight: bold;
+    font-family: ubuntu;
+    letter-spacing: 1px;
+    color: rgb(245, 241, 240);
+}
